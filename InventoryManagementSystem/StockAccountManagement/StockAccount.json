@@ -1,0 +1,17 @@
+[
+  {
+    "NumberOFShare": 5,
+    "SharePrice": 500,
+    "StockName": "DomesticStock"
+  },
+  {
+    "NumberOFShare": 10,
+    "SharePrice": 5000,
+    "StockName": "PreferdStock"
+  },
+  {
+    "NumberOFShare": 10,
+    "SharePrice": 4500,
+    "StockName": "InvestStock"
+  }
+] 
