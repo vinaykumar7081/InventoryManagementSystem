@@ -1,0 +1,53 @@
+{
+  "RiceList": [
+    {
+      "Name": "Basmati",
+      "Price": 80,
+      "Weight": 50
+    },
+    {
+      "Name": "Sambha",
+      "Price": 60,
+      "Weight": 50
+    },
+    {
+      "Name": "Kalanamak",
+      "Price": 150,
+      "Weight": 150
+    }
+  ],
+  "PulsesList": [
+    {
+      "Name": "GramPulses",
+      "Price": 80,
+      "Weight": 50
+    },
+    {
+      "Name": "MoongPulses",
+      "Price": 110,
+      "Weight": 50
+    },
+    {
+      "Name": "BlackMatpePulses",
+      "Price": 120,
+      "Weight": 150
+    }
+  ],
+  "WheatList": [
+    {
+      "Name": "Wheat1",
+      "Price": 20,
+      "Weight": 50
+    },
+    {
+      "Name": "Wheat2",
+      "Price": 30,
+      "Weight": 50
+    },
+    {
+      "Name": "Wheat3",
+      "Price": 50,
+      "Weight": 20
+    }
+  ]
+}
