@@ -9,17 +9,17 @@ namespace InventoryManagementSystem.InventoryDataManupulation
 {
     public class InventoryManupulate
     {
-        InventoryData inventory=new InventoryData();
+        InventoryData inventory =new InventoryData();
         InventoryFactory factory=new InventoryFactory();
         List<InventoryData> riceList = new List<InventoryData>();
         List<InventoryData> pulsesList=new List<InventoryData>();
         List<InventoryData> wheatList = new List<InventoryData>();
         public void ReadData(string filePath)
         {
-            InventoryFields fields = factory.ReadJson(filePath);
-            this.riceList = fields.RiceList;
-            this.pulsesList = fields.PulsesList;
-            this.wheatList = fields.WheatList;
+            InventoryFields field = factory.ReadJson(filePath);
+            this.riceList = field.RiceList;
+            this.pulsesList = field.PulsesList;
+            this.wheatList = field.WheatList;
         }
         public void AddInventory(InventoryData data,string inventoryName ,string filePath)
         {
@@ -45,16 +45,17 @@ namespace InventoryManagementSystem.InventoryDataManupulation
             fields.PulsesList = pulsesList;
             fields.WheatList = wheatList;
             factory.WriteToJson(filePath, fields);
-            inventory.DisplayInventoryData(filePath);
+           inventory.DisplayInventoryData(filePath);
         }
-        public void EditInventory(string inventoryName, string grainName ,string filePath)
+        public void EditInventory(Inventory data1, string inventoryName, string filePath)
         {
+            ReadData(filePath);
             Inventory inventory = new Inventory();
             if (inventoryName.Equals("Rice"))
             {
                 foreach (InventoryData data in riceList)
                 {
-                    if (data.Equals(grainName))
+                    if (data.Equals(data1))
                     { 
                     Console.WriteLine("Enter the Option to edit the Code");
                         int option=Convert.ToInt32(Console.ReadLine());
@@ -78,7 +79,7 @@ namespace InventoryManagementSystem.InventoryDataManupulation
             {
                 foreach (InventoryData data in pulsesList)
                 {
-                    if (data.Equals(grainName))
+                    if (data.Equals(data1))
                     {
                         Console.WriteLine("Enter the Option to edit the Code");
                         int option = Convert.ToInt32(Console.ReadLine());
@@ -101,7 +102,7 @@ namespace InventoryManagementSystem.InventoryDataManupulation
             {
                 foreach (InventoryData data in wheatList)
                 {
-                    if (data.Equals(grainName))
+                    if (data.Equals(data1))
                     {
                         Console.WriteLine("Enter the Option to edit the Code");
                         int option = Convert.ToInt32(Console.ReadLine());

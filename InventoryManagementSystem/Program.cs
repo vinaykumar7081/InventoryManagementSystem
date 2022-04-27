@@ -6,7 +6,7 @@ public class Program
     public static void Main(String[] args)
     {
         Console.WriteLine("Welcome In The Inventory Management");
-        const string INVENTORY_PATH = @"D:\InventoryManagementProblemStatement\InventoryManagementSystem\InventoryManagementSystem\InventoryManagement\Inventory.json";
+        const string INVENTORY_PATH = @"D:\InventoryManagementProblemStatement\InventoryManagementSystem\InventoryManagementSystem\InventoryDataManupulation\InventoryObject.json";
         InventoryData inventoryData = new InventoryData();
         InventoryManupulate inventoryManupulate = new InventoryManupulate();
         Console.WriteLine("Display 1\n Add Data in the Inventory 2\n Editing the Data 3\n ");
@@ -18,19 +18,26 @@ public class Program
             switch (option)
             {
                 case 1:
-                   inventoryData.DisplayInventoryData(INVENTORY_PATH);
+                    inventoryManupulate.ReadData(INVENTORY_PATH);
                     break;
-                case 2:
-                    Console.WriteLine(" Enter the Adding data\n Inventory ListName\n File Path");
-                    string inventory_Name=Console.ReadLine();
-                    InventoryData data=new InventoryData();
-                    inventoryManupulate.AddInventory(data, inventory_Name,INVENTORY_PATH);
-                    break;
+
+                //case 2:
+                //    Console.WriteLine(" Enter the Adding data\n Inventory ListName\n File Path");
+                //    string inventory_Name=Console.ReadLine();
+                //    Inventory data=new Inventory();
+                //    data.Name = Console.ReadLine();
+                //    data.Weight = 5;
+                //    data.Price = 50;
+                //    inventoryManupulate.AddInventory(data, inventory_Name,INVENTORY_PATH);
+                //    break;
                 case 3:
                     Console.WriteLine("Enter the InventoryName List \n Grain Name\n FilePath");
-                    string inventoryName=Console.ReadLine();
-                    string grain_NAme=Console.ReadLine();
-                    inventoryManupulate.EditInventory(inventoryName, grain_NAme, INVENTORY_PATH);
+                    string inventoryName = Console.ReadLine();
+                    Inventory data1 = new Inventory();
+                    data1.Name = Console.ReadLine();
+                    data1.Weight = 40;
+                    data1.Price = 75;
+                    inventoryManupulate.EditInventory(data1, inventoryName, INVENTORY_PATH);
                     break;
 
                 case 0:
