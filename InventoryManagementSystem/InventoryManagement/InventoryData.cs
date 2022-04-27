@@ -14,7 +14,7 @@ namespace InventoryManagementSystem.InventoryManagement
         { 
         StreamReader reader = new StreamReader(filePath);
 
-            string json = reader.ReadToEnd();
+            string json = reader.ReadToEnd();//Reading File From the folder
             var inventory = JsonConvert.DeserializeObject<List<Inventory>>(json);
             Console.WriteLine("Name"+"\t"+"PricePrKg"+"\t"+"Weight"+"\t\t"+"TotalPrice");
             foreach (Inventory item in inventory)

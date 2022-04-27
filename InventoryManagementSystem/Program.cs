@@ -9,7 +9,7 @@ public class Program
         const string INVENTORY_FILE_PATH = @"D:\InventoryManagementProblemStatement\InventoryManagementSystem\InventoryManagementSystem\InventoryManagement\Inventory.json";
         InventoryData inventoryData = new InventoryData();
         StockPortfolio stock=new StockPortfolio();
-        Console.WriteLine("Display 1\n");
+        Console.WriteLine("Display 1\n Display Stock Data2\n");
         bool check = true;
         while (check)
         {
